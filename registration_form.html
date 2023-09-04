@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Address Form</title>
+    <link rel="stylesheet" href="registration_form.css" />
+  </head>
+  <body>
+    <section class="container">
+      <header>Registration Form</header>
+      <form method="post" class="form">
+
+        <div class="input-box">
+          <label>Name</label>
+          <input type="text" placeholder="Enter name" required />
+        </div>
+
+        <div class="input-box">
+          <label> Email Address</label>
+          <input type="email" placeholder="Enter Email Address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required />
+        </div>
+
+
+        <div class="input-box">
+          <label>Address 1</label>
+          <input type="text" placeholder="Enter Address 1" required />
+        </div>
+
+        <div class="input-box">
+          <label>Address 2</label>
+          <input type="text" placeholder="Enter address 2" required />
+        </div>
+
+        <div class="column">
+          <div class="input-box">
+            <label>Mobile Number</label>
+            <input type="num" placeholder="Enter Mobile Number" required />
+          </div>
+
+          <div class="input-box">
+            <label>Date of Birth</label>
+            <input type="date" required />
+          </div>
+        </div>
+
+        <div class="gender-box">
+          <h3>Gender</h3>
+          <div class="gender-option">
+            <div class="gender">
+              <input type="radio" id="check-male" name="gender" checked />
+              <label for="check-male">male</label>
+            </div>
+            <div class="gender">
+              <input type="radio" id="check-female" name="gender" />
+              <label for="check-female">Female</label>
+            </div>
+            <div class="gender">
+              <input type="radio" id="check-other" name="gender" />
+              <label for="check-other">prefer not to say</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="input-box address">
+          <div class="column">
+            <div class="select-box">
+              <select>
+                <option hidden>Country</option>
+                <option>India</option>
+                <option>Russia</option>
+                <option>Korea</option>
+                <option>America</option>
+                <option>Japan</option>
+                <option>China</option>
+                <option>Nepal</option>
+              </select>
+            </div>
+
+            <input type="text" placeholder="Enter your city" required />
+
+          </div>
+
+          <div class="column">
+            <input type="password" id="password" placeholder="Enter your password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,16}$" required />
+            <input type="password" id="confirm_password" placeholder="Confirm your password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,16}$" required />
+          </div>
+
+        </div>
+        <button onsubmit="alert('You have Submitted your address successfully' )" type="submit">Submit</button>
+      </form>
+    </section>
+
+    <script src="script.js"></script>
+
+  </body>
+</html>
+
